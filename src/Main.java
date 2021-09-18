@@ -1,10 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        int ticketCost = 10321;
-        int rublesPerMyle = 20;
-        int bonusRubles = ticketCost / rublesPerMyle;
-        System.out.println("Вам начислено " + bonusRubles + " бонусных рублей.");
+        BonusMilesService service = new BonusMilesService();
+        int ticketCost = 10_321;
+        int miles = service.calculate(ticketCost);
+        System.out.println("Вам начислено " + miles + " бонусных миль");
     }
 }
 
